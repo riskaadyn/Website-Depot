@@ -23,9 +23,12 @@
          <a href="#"><i class="fas fa-phone"></i> +62 215 821 8521</a>
          <a href="#"><i class="fas fa-phone"></i> +62 215 821 2421</a>
          <a href="#"><i class="fas fa-envelope"></i>programmingborneo@gmail.com</a>
-         <a href="https://www.google.com/maps?q=Summarecon+Mall+Bekasi" target="_blank">Summarecon</a>
-        
-
+         <a href="https://www.google.com/maps?q=Summarecon+Mall+Bekasi" target="_blank">
+            <i class="fas fa-map-marker-alt"></i> Summarecon, Bekasi - 185421
+            <br>
+            Klik di sini untuk melihat lokasi di Google Maps
+        </a>
+         
       </div>
 
       <div class="box">
