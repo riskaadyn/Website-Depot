@@ -43,7 +43,7 @@ include 'components/wishlist_cart.php';
 
 <section class="category">
 
-   <h1 class="heading">Kategori Produk</h1>
+   <h1 class="heading">Kategori </h1>
 
    <div class="swiper category-slider">
 
