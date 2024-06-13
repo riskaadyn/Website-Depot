@@ -1,7 +1,6 @@
 <?php
-
+// Include your PHP logic for session management and database connection
 include 'components/connect.php';
-
 session_start();
 
 if(isset($_SESSION['user_id'])){
@@ -12,6 +11,26 @@ if(isset($_SESSION['user_id'])){
 
 include 'components/wishlist_cart.php';
 
+// Handle admin login form submission
+if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['username']) && isset($_POST['password'])) {
+   $username = $_POST['username'];
+   $password = $_POST['password'];
+   
+   // Hardcoded values for demonstration, replace with secure authentication method
+   $expected_username = 'admin';
+   $expected_password = '111';
+   
+   // Check if username and password match
+   if($username === $expected_username && $password === $expected_password) {
+      // Login successful, set session and redirect
+      $_SESSION['admin_logged_in'] = true;
+      header("Location: Admin/dashboard.php");
+      exit; // Ensure that no further output is sent
+   } else {
+      // Login failed
+      $admin_login_error = "Username atau Password salah. Silakan coba lagi.";
+   }
+}
 ?>
 
 <!DOCTYPE html>
@@ -20,22 +39,32 @@ include 'components/wishlist_cart.php';
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>home</title>
+   <title>Home</title>
 
+   <!-- CSS links -->
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-   
-   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-   <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
    
 <?php include 'components/user_header.php'; ?>
 
 <div class="home-bg">
+
+<!-- Form for Admin Login -->
+<div class="admin-login-form">
+   <h2>Login Admin</h2>
+   <?php if(isset($admin_login_error)): ?>
+      <div class="error"><?= $admin_login_error; ?></div>
+   <?php endif; ?>
+   <form action="" method="post">
+      <input type="text" name="username" placeholder="Masukkan Username" required>
+      <input type="password" name="password" placeholder="Masukkan Password" required>
+      <button type="submit">Login</button>
+   </form>
+</div>
+
 
 <section class="home">
 
