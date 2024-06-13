@@ -23,7 +23,9 @@
          <a href="#"><i class="fas fa-phone"></i> +62 215 821 8521</a>
          <a href="#"><i class="fas fa-phone"></i> +62 215 821 2421</a>
          <a href="#"><i class="fas fa-envelope"></i>programmingborneo@gmail.com</a>
-         <a href="#"><i class="fas fa-map-marker-alt"></i> kalimantan, indonesia - 185421 </a>
+         <a href="https://www.google.com/maps?q=Summarecon+Mall+Bekasi" target="_blank">Summarecon</a>
+        
+
       </div>
 
       <div class="box">
